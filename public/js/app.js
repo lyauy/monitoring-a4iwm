@@ -6817,7 +6817,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   created: function created() {
     this.getProjects();
@@ -47110,7 +47109,22 @@ var render = function() {
           return _c("tr", { key: project.id }, [
             _c("td", [_vm._v("#" + _vm._s(project.id))]),
             _vm._v(" "),
-            _c("td", [_vm._v(_vm._s(project.name))]),
+            _c(
+              "td",
+              [
+                _c(
+                  "router-link",
+                  {
+                    attrs: {
+                      to: { name: "edit", params: { id: project.id } },
+                      title: "Consulter/Modifier"
+                    }
+                  },
+                  [_vm._v(_vm._s(project.name) + "\n                    ")]
+                )
+              ],
+              1
+            ),
             _vm._v(" "),
             _c("td", [_vm._v(_vm._s(project.client))]),
             _vm._v(" "),
@@ -47137,17 +47151,6 @@ var render = function() {
                 { staticClass: "btn-group", attrs: { role: "group" } },
                 [
                   _c(
-                    "router-link",
-                    {
-                      staticClass: "btn btn-primary",
-                      attrs: {
-                        to: { name: "edit", params: { id: project.id } }
-                      }
-                    },
-                    [_vm._v("Voir\n                    ")]
-                  ),
-                  _vm._v(" "),
-                  _c(
                     "button",
                     {
                       staticClass: "btn btn-danger",
@@ -47159,8 +47162,7 @@ var render = function() {
                     },
                     [_vm._v("Supprimer")]
                   )
-                ],
-                1
+                ]
               )
             ])
           ])

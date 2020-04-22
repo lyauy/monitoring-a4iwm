@@ -46,7 +46,8 @@
             <tbody  style="background-color: white;">
                 <tr v-for="project in paginatedProjects" :key="project.id">
                     <td>#{{ project.id }}</td>
-                    <td>{{ project.name }}</td>
+                    <td><router-link :to="{name: 'edit', params: { id: project.id }}" title="Consulter/Modifier">{{ project.name }}
+                        </router-link></td>
                     <td>{{ project.client }}</td>
                     <td>
                         <div class="progress">
@@ -56,8 +57,6 @@
                     <td>{{ project.deadline }}</td>
                     <td>
                     <div class="btn-group" role="group">
-                        <router-link :to="{name: 'edit', params: { id: project.id }}" class="btn btn-primary">Voir
-                        </router-link>
                         <button class="btn btn-danger" @click="deleteProject(project.id)">Supprimer</button>
                     </div>
                 </td>
