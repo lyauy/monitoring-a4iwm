@@ -4,35 +4,47 @@
             <h3 class="text-center">Ajouter un projet</h3>
         </nav>
 
-
+</br>
         <div class="row">
         </div>
         <div class="row">
             <div class="col-md-6">
                 <form @submit.prevent="addProject">
-                    <div class="form-group">
-                        <label>Nom du projet</label>
-                        <input type="text" class="form-control" v-model="project.name">
+                    <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Nom du projet</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" v-model="project.name">
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label>Client</label>
-                        <input type="text" class="form-control" v-model="project.client">
+                    <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Client</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" v-model="project.client">
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label>Adresse du client</label>
-                        <input type="text" class="form-control" v-model="project.client_addr">
+                    <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Adresse du client</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" v-model="project.client_addr">
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label>Deadline</label>
-                        <input type="date" class="form-control" v-model="project.deadline">
+                    <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Deadline</label>
+                        <div class="col-sm-9">
+                            <input type="date" class="form-control" v-model="project.deadline">
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label>Prix du projet</label>
-                        <input type="number" class="form-control" v-model="project.total_price">
+                    <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Prix du projet</label>
+                        <div class="col-sm-9">
+                            <input type="number" class="form-control" v-model="project.total_price">€
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label>Informations complémentaires</label>
-                        <input type="textarea" class="form-control" v-model="project.description">
+                    <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Informations complémentaires</label>
+                        <div class="col-sm-9">
+                            <textarea class="form-control" v-model="project.description"></textarea>
+                        </div>
                     </div>
                     <button type="submit" class="btn btn-primary">Ajouter un projet</button>
                 </form>
