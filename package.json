@@ -27,7 +27,7 @@
     "dependencies": {
         "jspdf": "^1.5.3",
         "mdbvue": "^6.7.0",
-        "moment": "^2.24.0",
+        "moment": "^2.29.4",
         "vform": "^1.0.1",
         "vue-axios": "^2.1.5",
         "vue-fontawesome": "0.0.2",
